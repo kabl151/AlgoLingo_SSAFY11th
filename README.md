@@ -53,7 +53,7 @@ ex)
 ---
 
 ## ✍Pull Request 룰
-
+`꼭 자신이 Fork한 Repository에서 PR 요청 생성 부탁드립니다!`
 `PR Title` : 이름 / 주차 / 요일
 
 ex) 김재엽 / 1월 4주차 / 목
