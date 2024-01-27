@@ -34,10 +34,10 @@ class ExtendedModel(Other, Novel):
         self.extended_instance = extended_instance
 
     def display_info(self):
-        return print(f'PK: {self.PK}, TYPE: {self.TYPE}, Extended Type: {self.extended_instance}')
+        print(f'PK: {self.PK}, TYPE: {self.TYPE}, Extended Type: {self.extended_instance}')
 
     def save(self):
-        return print("데이터를 확장해서 저장합니다.")
+        print("데이터를 확장해서 저장합니다.")
 
 
 print('ExtendedModel 인스턴스의 정보 출력 및 저장 메서드 호출')

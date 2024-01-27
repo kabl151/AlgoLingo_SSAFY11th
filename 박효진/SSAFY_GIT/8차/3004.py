@@ -7,7 +7,7 @@ try:
         data['age'] = 30
         print(data)
 # 아래에 코드를 작성하시오.
-except:
+except KeyError:
     print("data에는 age라는 키가 없습니다.")
     data['age'] = 30
     print(data)
@@ -19,7 +19,7 @@ try:
         print(arr.pop())
     print(arr)
 # 아래에 코드를 작성하시오.
-except:
+except IndexError:
     print([])
     print('더 이상 pop 할 수 없습니다.')
 
@@ -27,5 +27,5 @@ try:
     word = '3.15'
     print(int(word))
 # 아래에 코드를 작성하시오.
-except:
+except ValueError:
     print('정수로 변환 가능한 값을 입력해 주세요.')

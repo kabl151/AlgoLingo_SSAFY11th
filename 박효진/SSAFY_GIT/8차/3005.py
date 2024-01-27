@@ -20,7 +20,7 @@ class Novel(BaseModel):
         self.author = author
         
 class Other(BaseModel):
-    TYPE = 'Other Modael'
+    TYPE = 'Other Model'
 
     def save(self):
         print('데이터를 다른 장소에 저장합니다.')
