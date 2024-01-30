@@ -50,7 +50,7 @@ for tc in range(1, T + 1):
     while pos + K < N:
         # K 거리 내에서 가장 먼 충전소를 찾아 위치 이동.
         # pos + K, pos + K - 1, pos + K-2 ... pos + 1
-        for nxt in range(pos+K, pos - 1, -1):
+        for nxt in range(pos + K, pos, -1):
             # 다음 위치는 nxt
             # 다음 위치 nxt 에서 충전소가 있다면 이동
             if stations[nxt] == 1:
