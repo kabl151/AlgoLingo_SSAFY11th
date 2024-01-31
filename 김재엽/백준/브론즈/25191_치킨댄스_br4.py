@@ -23,7 +23,7 @@ import math # math 모듈 import
 N = int(input()) # 치킨집에 있는 치킨의 총 갯수
 A, B = map(int, input().split()) # A-콜라의 개수 B-맥주의 개수
 
-chick_demand = math.floor(A/2) + B # 콜라의 개수가 3병일 때 -> 내림함수 적용
+chick_demand = math.floor(A/2) + B # 콜라의 개수가 3병일 때 -> 내림함수 적용!
 
 if chick_demand >= N: #치킨집에 있는 치킨 수 보다 요구량이 같거나 더 크다면
     print(N) # 치킨집에 있는 치킨 수 출력
