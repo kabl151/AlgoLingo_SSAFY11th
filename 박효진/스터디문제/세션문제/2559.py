@@ -37,3 +37,40 @@ tem_lst = list(map(int, input().split()))
 
 # print(max_sum)
 
+
+
+# max_sum = -100 * K    (시간초과)
+# for i in range(0, N-K+1):
+#     sum_num = 0
+#     for j in range(i, i + K):
+#         sum_num += tem_lst[j]
+#     if sum_num >= max_sum:
+#         max_sum = sum_num
+#     else:
+#         pass
+
+# print(max_sum)
+
+# max_sum = -100 * K    (시간초과)
+# for i in range(0, N-K+1):
+#     sum_num = 0
+#     for j in range(i, i + K):
+#         sum_num += tem_lst[j]
+#     if sum_num >= max_sum:
+#         max_sum = sum_num
+
+# 리스트 갯수 N과 연속적인 날자 수 K 할당
+N, K = map(int, input().split())
+
+# 두번째 input 값을 공백을 기준으로나눈 list 할당
+tem_lst = list(map(int, input().split()))
+max_num = 0
+for i in range(0, N-K+1):
+    sum_num = 0
+    for j in range(i, i + K):
+        sum_num = tem_lst[i + 1] - tem_lst[i - 1]
+
+
+    nxt_num = tem_lst[i + 1] - tem_lst[i - 1]
+    if max_num <= nxt_num:
+        max_num = nxt_num
