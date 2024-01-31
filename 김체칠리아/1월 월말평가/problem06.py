@@ -1,30 +1,48 @@
-############## 주의 ##############
-# 입력을 받기위한 input 함수는 절대 사용하지 않습니다.
-def is_id_valid(user):
+matrix = [
+        ['0, 1', '0, 2', '0, 3'], 
+        ['1, 0', '1, 1', '1, 2', '1, 3'], 
+        ['2, 0', '2, 1', '2, 2', '2, 3', '2, 4'], 
+        ['3, 0', '3, 1'], 
+        ['4, 0', '4, 1', '4, 2'], 
+        ['5, 0']
+    ]
+# 아래애 코드를 작성하시오.
+#1
+matrix_len = 0
+for i in matrix:
+    matrix_len += 1
+print(matrix_len)    
 
-    # 여기에 코드를 작성합니다.
-    if user['id'][-1].isdecimal() == True:
-        return True
-    else:
-        return False
+# 2
+for i in matrix:
+    temporary_len =0
+    for number in i:
+        temporary_len += 1
+    print(f'{i} 리스트는 {temporary_len}개 만큼 요소를 가지고 있습니다.')    
 
-# 추가 테스트를 위한 코드 작성 가능
-# 예) print(함수명(인자))
-
-#####################################################
-# 아래 코드를 삭제하는 경우 
-# 모든 책임은 삭제한 본인에게 있습니다. 
-############## 테스트 코드 삭제 금지 #################
-user_data1 = {
-    'id': 'jungssafy5',
-    'password': '1q2w3e4r',
-}
-print(is_id_valid(user_data1)) # True
+#3
+for i in range(len(matrix)):
+    
+    for j in range(len(matrix[i])):
+        print(f'matrix의 {i}, {j} 번째 요소의 값은 {matrix[i][j]}입니다.')
 
 
-user_data2 = {
-    'id': 'kimssafy!',
-    'password': '1q2w3e4r',
-}
-print(is_id_valid(user_data2)) # False
-#####################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# #2
+# for j in matrix:
+#     matrix_len_ += 1
+# print(matrix_len)

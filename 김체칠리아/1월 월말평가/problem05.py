@@ -6,6 +6,7 @@ def is_user_data_valid(user):
     else:
         return True
     
+
     # 여기에 코드를 작성합니다.
 
 
@@ -21,6 +22,7 @@ user_data1 = {
     'password': '1q2w3e4r',
 }
 print(is_user_data_valid(user_data1)) # False 
+print(bool(user_data1['id']))
 
 user_data2 = {
     'id': 'jungssafy',
