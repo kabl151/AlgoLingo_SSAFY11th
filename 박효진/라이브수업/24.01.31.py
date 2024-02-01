@@ -18,6 +18,23 @@
 #     for j in range(m):
 #         f(array[i][j + (m-1-2)*(j%2)])
 
+# # 델타를 이용한 2차 배열 탐색
+# N = int(input())
+# arr = [0] * N
+# lst = []
+# di = [0, 1, 0, -1]
+# dj = [1, 0, -1, 0]
+# for i in range(0, N):
+#     for j in range(0, N):
+#         sum = arr[i][j]
+#         for k in range(4):
+#             ni = i + di[k]
+#             nj = j + dj[k]
+#             if 0 <= ni < N and 0 <= nj < N:
+#                 sum += arr[ni][nj]
+#         lst.append(sum)
+#전치행렬 : ppt참고
+
 # #부분집합 생성
 # bit = [0, 0, 0, 0]
 # for i in range(2):
