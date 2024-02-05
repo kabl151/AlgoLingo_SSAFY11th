@@ -22,16 +22,24 @@
 
 #         -------------------------------
 # 전치행렬 될까?.. 빈공백있으면 실행안되는듯..
+# arr = [list(map(str, input())) for _ in range(5)]
+
+# max_len = 0
+# for i in range(5):
+#     if max_len <= len(arr[i]):
+#         max_len = len(arr[i])
+
+# empty_arr = [['']*max_len for _ in range(5)]
+
+# for i in range(5):
+#     for j in range(max_len):
+#         empty_arr[i][j] = arr[j][i]
+# print(empty_arr)
+
 arr = [list(map(str, input())) for _ in range(5)]
-
-max_len = 0
-for i in range(5):
-    if max_len <= len(arr[i]):
-        max_len = len(arr[i])
-
-empty_arr = [['']*max_len for _ in range(5)]
+empty_arr = [['']*5 for _ in range(15)]
 
 for i in range(5):
-    for j in range(max_len):
-        empty_arr[i][j] = arr[j][i]
+    for j in range(15):
+        empty_arr[j][i] = arr[i][j]
 print(empty_arr)
