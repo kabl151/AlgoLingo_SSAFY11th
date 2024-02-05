@@ -61,3 +61,25 @@ print(string)
 print(type(string))
     
     
+# #문자 -> 숫자
+# def atoi(s):
+#     i = 0
+#     for x in s:
+#         i = i * 10 + ord(x) - ord('0')
+#     return i
+
+# s = '123'
+# print(atoi(s))
+# print(type(atoi(s)))    #<class 'int'>
+
+# #숫자 -> 문자
+# def itoa(a):
+#     s = ''
+#     while a > 0:
+#         s = chr(a % 10 + ord('0')) + s
+#         a //= 10
+#     return s
+
+# a = 123
+# print(itoa(a))
+# print(type(itoa(a)))    #<class 'str'>
