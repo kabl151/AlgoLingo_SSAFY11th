@@ -16,9 +16,6 @@
 #     print('숫자가 입력되지 않았습니다.')
 
 
-
-
-
 # # 1차원 배열의 선언
 # arr_1 = list()
 # arr_2 = []
@@ -31,25 +28,7 @@
 # print(arr_4) # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 
-#문자 -> 숫자
-def atoi(s):
-    i = 0
-    for x in s:
-        i = i * 10 + ord(x) - ord('0')
-    return i
-
-s = '123'
-print(atoi(s))
-print(type(atoi(s)))    #<class 'int'>
-
-#숫자 -> 문자
-def itoa(a):
-    s = ''
-    while a > 0:
-        s = chr(a % 10 + ord('0')) + s
-        a //= 10
-    return s
-
-a = 123
-print(itoa(a))
-print(type(itoa(a)))    #<class 'str'>
+# num_lst = ["ZRO", "ONE", "TWO", "THR", "FOR", "FIV", "SIX", "SVN", "EGT", "NIN"]
+# lst = [5]
+# for _ in range(5):
+#     print(*num_lst)
