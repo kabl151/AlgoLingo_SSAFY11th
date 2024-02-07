@@ -23,10 +23,8 @@
 #         print(True)
 #     else:
 #         print(False)
-A, B, V = map(int, input().split())
 
-result = (V - A) / (A - B) + 1
-if result == int(result):
-    print(int(result))
-else:
-    print(int(result + 1))
+lst = [1,2] + [3]
+print(lst)
+
+print(lst[-2:-1:1])
