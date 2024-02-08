@@ -1,14 +1,48 @@
 arr = input().split()
-n = arr[0]
+wd = arr[0]
 b = int(arr[1])
-lst = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+dct = {
+    '0' : 0,
+    '1' : 1,
+    '2' : 2,
+    '3' : 3,
+    '4' : 4,
+    '5' : 5,
+    '6' : 6,
+    '7' : 7,
+    '8' : 8,
+    '9' : 9,
+    'A' : 10,
+    'B' : 11,
+    'C' : 12,
+    'D' : 13,
+    'E' : 14,
+    'F' : 15,
+    'G' : 16,
+    'H' : 17,
+    'I' : 18,
+    'J' : 19,
+    'K' : 20,
+    'L' : 21,
+    'M' : 22,
+    'N' : 23,
+    'O' : 24,
+    'P' : 25,
+    'Q' : 26,
+    'R' : 27,
+    'S' : 28,
+    'T' : 29,
+    'U' : 30,
+    'V' : 31,
+    'W' : 32,
+    'X' : 33,
+    'Y' : 34,
+    'Z' : 35
+}
+wd = wd[::-1]
+sum_result = 0
+for i in range(len(wd)):
+    result = b**i *dct[wd[i]]
+    sum_result += result
 
-num = []
-for i in n:
-    num += [lst.index(i)+1]
-
-total_num = 0
-for j in range(len(num),1,-1):
-    total_num += b**j
-
-print(total_num)
+print(sum_result)
