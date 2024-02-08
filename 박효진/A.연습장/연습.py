@@ -24,7 +24,4 @@
 #     else:
 #         print(False)
 
-lst = [1,2] + [3]
-print(lst)
-
-print(lst[-2:-1:1])
+scores = [int(input()) for _ in range(N)]
