@@ -32,3 +32,27 @@
 # lst = [5]
 # for _ in range(5):
 #     print(*num_lst)
+
+# def MenOfPassion(A,n):
+#     sum = 0
+#     for i in range(1, n-1):
+#         for j in range(i, n):
+#             sum += A[i]*A[j]
+#     return sum
+# A = [[1,1],[1,1]]
+# n = int(input())
+# print(MenOfPassion(A,n))
+
+# def MenOfPassion(A,n):
+#     sum = 0
+#     for i in range(1, n-2):
+#         for j in range(i+1, n-1):
+#             for k in range(j+1, n):
+#                 sum += A[i]*A[j]*A[k]
+#     return sum
+# A = [[1,1],[1,1]]
+n = int(input())
+# print(MenOfPassion(A,n))
+n = int(input())
+print((n-2)*(n-1)*n // 2 // 3)
+print(3)

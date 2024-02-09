@@ -2,14 +2,15 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
-arr_N = list(map(int, input().split()))
-
+arr_N = set(map(int, input().split()))
 M = int(input())
 arr_M = list(map(int, input().split()))
-result = []
+
+arr_N = sorted(list(arr_N))
+arr_M.sort
+
 for i in arr_M:
     if i in arr_N:
-        result.append(1)
+        print(1)
     else:
-        result.append(0)
-print(*result)
+        print(0)
