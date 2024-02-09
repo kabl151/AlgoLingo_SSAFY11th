@@ -7,20 +7,23 @@
 # cnt = 0
 # 0*1 + + + 3*1 3*1 - + 3*1 - 2*1 - - + 1* -
 
-# T = int(input())
-# for tc in range(1,T+1):
-stack = []
-lazer = list(input())
-cnt = 0
+T = int(input())
+for tc in range(1,T+1):
+    stack = []
+    lazer = list(input())
+    cnt = 0
+    idx_num = 0
 
-for lz in lazer:
-    if lz == '(' and (len(stack) == 0 or stack[-1] != ')'):
-        stack.append(lz)
-    elif lz == '(' and stack[-1] == '(':
-        stack.append(lz)
-    elif lz == ')' and stack[-1] == ')':
-        stack.pop()
-    elif lz == ')' and stack[-1] == '(':
-        stack.pop()
-        cnt += len(stack)
-print(cnt)
+    for lz in lazer:
+        if lz == '(' and (len(stack) == 0 or stack[-1] != ')'):
+            stack.append(lz)
+        elif lz == '(' and stack[-1] == '(':
+            stack.append(lz)
+        elif lz == ')' and stack[-1] == '(':
+            stack.pop()
+            if lazer[idx_num-1] == ')':
+                cnt += 1
+            else:
+                cnt += len(stack)
+        idx_num += 1
+    print(f'#{tc} {cnt}')
