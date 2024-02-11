@@ -24,7 +24,11 @@
 #     else:
 #         print(False)
 
-lst = [1,2] + [3]
-print(lst)
+# lst = [1,2] + [3]
+# print(lst)
 
-print(lst[-2:-1:1])
+# print(lst[-2:-1:1])
+
+arr = input().split()
+print(arr[0])
+# print(arr[1])
