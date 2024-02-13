@@ -1,40 +1,40 @@
 import sys
 input = sys.stdin.readline
-
+from collections import deque
 N = int(input())
-deck = []
+dq = deque()
 for _ in range(N):
     keyword = input().split()
     if keyword[0] == '1':
-        deck.insert(0,keyword[1])
+        dq.appendleft(keyword[1])
     elif keyword[0] == '2':
-        deck.append(keyword[1])
+        dq.append(keyword[1])
     elif keyword[0] == '3':
-        if deck:
-            num = deck.pop(0)
+        if dq:
+            num = dq.popleft()
             print(num)
         else:
             print(-1)
     elif keyword[0] == '4':
-        if deck:
-            num = deck.pop(-1)
+        if dq:
+            num = dq.pop()
             print(num)
         else:
             print(-1)
     elif keyword[0] == '5':
-        print(len(deck))
+        print(len(dq))
     elif keyword[0] == '6':
-        if deck:
+        if dq:
             print(0)
         else:
             print(1)
     elif keyword[0] == '7':
-        if deck:
-            print(deck[0])
+        if dq:
+            print(dq[0])
         else:
             print(-1)
     elif keyword[0] == '8':
-        if deck:
-            print(deck[-1])
+        if dq:
+            print(dq[-1])
         else:
             print(-1)
