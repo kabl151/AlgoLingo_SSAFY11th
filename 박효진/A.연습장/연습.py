@@ -29,18 +29,6 @@
 
 # print(lst[-2:-1:1])
 
-N = int(input())
-arr = [x for x in range(1, N+1)]
-lst = []
-for i in arr:
-    if '3' in str(i):
-        i = str(i).replace('3','-')
-    if '6' in str(i):
-        i = str(i).replace('6','-')
-    if '9' in str(i):
-        i = str(i).replace('9','-')
-    if '-' in str(i):
-        num = str(i).count('-')
-        print('-'*num, end = ' ')
-    else:
-        print(i, end = ' ')
+arr = input().split()
+print(arr[0])
+# print(arr[1])
