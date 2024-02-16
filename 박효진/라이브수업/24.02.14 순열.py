@@ -17,57 +17,57 @@ def f(i, k):
             P[i], P[j] = P[j], P[i] # 위의 교환한 것 이후 다시 복구
             
 N = 3
-P = [1,2,3]
+P = [0,1,2]
 f(0, N) # 0번부터 시작하고 총 개수는 3개다
-# -----------------------------------------
-def f(i, k):
-    global min_v
-    global cnt
-    cnt += 1
-    if i==k:
-        s = 0       #선택한 원소의 합. 아래 for문은 합을 구하는 과정
-        for j in range(k):      # j 행에 대해   
-            s += arr[j][P[j]]   # j 행에서 P[j]열을 고른 경우
-        if min_v > s:
-            min_v = s
-    else:
-        for j in  range(i, k):
-            P[i], P[j] = P[j], P[i] # 자리 교환
-            f(i+1, k)
-            P[i], P[j] = P[j], P[i]
+# # -----------------------------------------
+# def f(i, k):
+#     global min_v
+#     global cnt
+#     cnt += 1
+#     if i==k:
+#         s = 0       #선택한 원소의 합. 아래 for문은 합을 구하는 과정
+#         for j in range(k):      # j 행에 대해   
+#             s += arr[j][P[j]]   # j 행에서 P[j]열을 고른 경우
+#         if min_v > s:
+#             min_v = s
+#     else:
+#         for j in  range(i, k):
+#             P[i], P[j] = P[j], P[i] # 자리 교환
+#             f(i+1, k)
+#             P[i], P[j] = P[j], P[i]
 
-N = int(input())
-arr = [list(map(int, input().split()))for _ in range(N)]
-P = [x for x in range(N)]
-cnt = 0
-min_v = 100
-f(0, N)
-print(min_v, cnt)
+# N = int(input())
+# arr = [list(map(int, input().split()))for _ in range(N)]
+# P = [x for x in range(N)]
+# cnt = 0
+# min_v = 100
+# f(0, N)
+# print(min_v, cnt)
 
-# -----------------------------------------
+# # -----------------------------------------
 
-def f(i, k, s):
-    global cnt
-    global min_v
-    cnt += 1
-    if i==k:
-        if min_v > s:
-            min_v = s
-    elif s >= min_v:
-        return
-    else:
-        for j in  range(i, k):
-            P[i], P[j] = P[j], P[i] # 자리 교환
-            f(i+1, k, s+arr[i][P[i]])
-            P[i], P[j] = P[j], P[i]
+# def f(i, k, s):
+#     global cnt
+#     global min_v
+#     cnt += 1
+#     if i==k:
+#         if min_v > s:
+#             min_v = s
+#     elif s >= min_v:
+#         return
+#     else:
+#         for j in  range(i, k):
+#             P[i], P[j] = P[j], P[i] # 자리 교환
+#             f(i+1, k, s+arr[i][P[i]])
+#             P[i], P[j] = P[j], P[i]
 
-N = int(input())
-arr = [list(map(int, input().split()))for _ in range(N)]
-P = [x for x in range(N)]
-min_v = 100
-cnt = 0
-f(0, N, 0)
-print(min_v, cnt)
+# N = int(input())
+# arr = [list(map(int, input().split()))for _ in range(N)]
+# P = [x for x in range(N)]
+# min_v = 100
+# cnt = 0
+# f(0, N, 0)
+# print(min_v, cnt)
 
 
 
