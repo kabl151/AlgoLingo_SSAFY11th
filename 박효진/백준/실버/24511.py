@@ -24,7 +24,7 @@
 
 
 # ============================================
-
+from collections import deque
 
 import sys
 input = sys.stdin.readline
@@ -39,12 +39,10 @@ queuestack = []
 result = []
 
 for i in range(N):
-    queuestack.append([A[i],B[i]])
-for j in C:
-    for k in range(N):
-        if queuestack[k][0] == 0:
-            queuestack[k][1], j = j, queuestack[k][1]
-        else:
-            pass
-    result.append(j)
+    if A[i] == 0:
+        queuestack.append(B[i])
+dq = deque(queuestack)
+for i in C:
+    dq.appendleft(i)
+    result.append(dq.pop())
 print(*result)
