@@ -19,13 +19,14 @@
 
 N = int(input())
 arr = []
+cnt = 0
 for i in range(N):
     num, name = map(str,input().split())
-    num = int(num)
-    lst = [num, name]
+    cnt += 1
+    lst = [int(num), cnt, name]
     arr += [lst]
 
 arr.sort()
 for i in range(N):
     result = arr[i]
-    print(*result)
+    print(result[0], result[2])
