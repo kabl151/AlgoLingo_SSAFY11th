@@ -23,6 +23,7 @@ import math
 N = int(input())
 st = set()
 a = int(input())
+min_num = a
 for _ in range(N-1):
     b = int(input())
     st.add(b-a)
@@ -30,5 +31,5 @@ for _ in range(N-1):
 
 result = math.gcd(*st)
 
-solve = [x for x in range(min(st), max(st)+1, result)]
+solve = [x for x in range(min_num, b, result)]
 print(len(solve)-N)
