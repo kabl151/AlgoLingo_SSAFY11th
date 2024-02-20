@@ -16,3 +16,19 @@
 # print(min(result_lst))
 
 
+import sys
+input = sys.stdin.readline
+import math
+
+N = int(input())
+st = set()
+a = int(input())
+for _ in range(N-1):
+    b = int(input())
+    st.add(b-a)
+    a = b
+
+result = math.gcd(*st)
+
+solve = [x for x in range(min(st), max(st)+1, result)]
+print(len(solve)-N)
