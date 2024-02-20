@@ -51,8 +51,10 @@
 #                 sum += A[i]*A[j]*A[k]
 #     return sum
 # A = [[1,1],[1,1]]
-n = int(input())
-# print(MenOfPassion(A,n))
-n = int(input())
-print((n-2)*(n-1)*n // 2 // 3)
-print(3)
+# n = int(input())
+# # print(MenOfPassion(A,n))
+# n = int(input())
+# print((n-2)*(n-1)*n // 2 // 3)
+# print(3)
+
+
