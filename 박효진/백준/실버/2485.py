@@ -31,5 +31,7 @@ for _ in range(N-1):
 
 result = math.gcd(*st)
 
-solve = [x for x in range(min_num, b, result)]
+solve = range(min_num, a+1, result)
+print(solve)
+print(type(solve))
 print(len(solve)-N)
