@@ -9,22 +9,15 @@
 # 단말노드를 기준으로 부모와 자리 바꾸기를 진행...!
 # while 더 바꿀 필요가 없을 때 까지... = 부모가 자식보다 작은값(최소힙)이거나 부모가 없는 상황일때까지
 def enqueue(hq, item):
-    # 단말 노드 item을 추가하고
-    hq.append(item)
-    # 추가한 요소의 인덱스
-    current = len(hq) - 1
-    # 현재의 이 노드가 루트노드까지 진행했을 때까지 진행하고 종료하겠다
-    while current != 1:
-        # 부모의 인덱스 값 (몫나누기 //2 하면 부모)
-        parent = current // 2
-        # 부모의 요소보다 자식이 작은 경우 = 자리바꾸기
-        if hq[parent] > hq[current]:
+    hq.append(item)     # 단말 노드 item을 추가하고
+    current = len(hq) - 1   # 추가한 요소의 인덱스
+    while current != 1:     # 현재의 이 노드가 루트노드까지 진행했을 때까지 진행하고 종료하겠다
+        parent = current // 2       # 부모의 인덱스 값 (몫나누기 //2 하면 부모)
+        if hq[parent] > hq[current]:    # 부모의 요소보다 자식이 작은 경우 = 자리바꾸기
             hq[parent], hq[current] = hq[current], hq[parent]
-            # 인덱스가 변경되었으므로 내 자신의 인덱스를 갱신
-            current = parent
+            current = parent        # 인덱스가 변경되었으므로 내 자신의 인덱스를 갱신
         else:
-            # 부모의 요소보다 자식이 클때는 자리를 바꾸지 않고 종료
-            break
+            break       # 부모의 요소보다 자식이 클때는 자리를 바꾸지 않고 종료
 
 # 삭제하는 연산 dequeue
 # 힙의 삭제과정은 루트 노드를 삭제하고 가장 끝에있는 단말 노드 하나를 루트노드로 끌고온다
