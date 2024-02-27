@@ -29,6 +29,6 @@
 
 # print(lst[-2:-1:1])
 
-arr = input().split()
-print(arr[0])
-# print(arr[1])
+# arr = input().split()
+# print(arr[0])
+# # print(arr[1])
