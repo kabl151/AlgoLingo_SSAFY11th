@@ -17,12 +17,11 @@ for i in wd_lst:
     len_wd = len(i)
     result.append([cnt,len_wd,i])
 
-result.sort()
-length = [[]*11]
-print(length)
-for i in range(len(result)-1):
+while len(result) != 0:
     if result[-1][0] > result[-2][0]:
         print(result.pop())
     elif result[-1][0] == result[-2][0] and result[-1][1] > result[-2][1]:
         print(result.pop())
     elif result[-1][0] == result[-2][0] and result[-1][1] == result[-2][1]:
+        result.sort()
+        print(result.pop())

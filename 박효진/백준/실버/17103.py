@@ -1,25 +1,25 @@
 import sys
 input = sys.stdin.readline
 
+path = []
+che = [True] * 1000001
+che[0] = False
+che[1] = False
+
+for i in range(2,1000001):
+    if che[i] == True:
+        k = i
+        i += k
+        while i < 1000001:
+            che[i] = False
+            i += k
+
 T = int(input())
-for i in range(T):
+for _ in range(T):
     N = int(input())
-    # judge = [True] * (N+1)
-    # judge[0] = False
-    # judge[1] = False
-    # sosu = []
-    # for i in range(2, N+1):
-    #     if judge[i] == True:
-    #         sosu.append(i)
-    #         judge[i] = False
-    #         for j in range(i, N+1, i):
-    #             judge[j] = False
+    result = 0
     sosu = []
-    for i in range(2,N+1):
-        if N % i == 0:
-            sosu.append(i)
-    result = []
-    for i in range(len(sosu)):
-        for j in range(i, len(sosu)):
-            result.append(sosu[i] + sosu[j])
-    print(result.count(N))
+    for i in range(2, N//2+1):
+        if che[i] and che[N-i]:
+            result += 1
+    print(result)
